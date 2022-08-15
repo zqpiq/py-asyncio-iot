@@ -5,7 +5,7 @@ from typing import Protocol
 from .message import Message, MessageType
 
 
-def generate_id(length: int = 8):
+def generate_id(length: int = 8) -> str:
     return "".join(random.choices(string.ascii_uppercase, k=length))
 
 
