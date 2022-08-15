@@ -37,6 +37,6 @@ For easier asynchronous setup please follow these steps:
    So the logic won't be broken. After that, your code will work a bit longer (still faster than at the beginning), 
    but at least it works correctly now.
     
-
+**Please note:** attach the screenshot of your script results (the console) to the PR.
 
 
