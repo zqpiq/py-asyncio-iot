@@ -13,7 +13,7 @@ def generate_id(length: int = 8):
 # so devices should not inherit for it (if it walks like a duck, and quacks like a duck, it's a duck)
 class Device(Protocol):
     def connect(self) -> None:
-        ...
+        ...  # Ellipsis - synonym to "pass", but sometimes has different meaning
 
     def disconnect(self) -> None:
         ...
