@@ -13,7 +13,7 @@ For easier asynchronous setup, please follow these steps:
 2. Try to `gather` registering devices — that should be easy. Devices may be registered **simultaneously**.
    And when you run the code — wow, it works faster (at least should). 
    That's because each device doesn't need to wait for the previous to register.
-3. After that `gather` running programs (in `service.py`) - here the code also may be easy.
+3. After that, `gather` running programs (in `service.py`) - here the code also may be easy.
    And if you run it — wow, it works so fast, `asyncio` is powerful! But look at the logic —
    we've broken it: we may start playing music on Speaker before it was turned on, 
    same with flushing and cleaning Smart Toilet. So, despite it working fast, it works incorrectly.
