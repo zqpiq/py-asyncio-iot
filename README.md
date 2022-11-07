@@ -33,10 +33,15 @@ For easier asynchronous setup, please follow these steps:
     async def run_parallel(*functions: Awaitable[Any]) -> None:
         await asyncio.gather(*functions)
     ```
-   Also, change the `wake_up_program` and `sleep_program` blocks and their run 
-   — to the combination of the `run_sequence` and `run_parallel` sending messages to the service. 
+   You have to change the `wake_up_program` and `sleep_program` blocks and their run 
+   — to the combination of the `run_sequence` and `run_parallel` sending messages to the service to make it more logical. 
    Please do that separately, firstly for `wake_up`, then for `sleep`. 
-   So the logic won't be broken. After that, your code will work a bit longer (still faster than at the beginning), 
+   
+   Hint:
+   Remove variables `wake_up_program` and `sleep_program` and `run the programs` block.
+   Instead, you should combine `run_sequence` and `run_parallel` with the same commands from `wake_up_program` and `sleep_program`.
+   The parallel running is always preferred, because it is faster, but logical order should be taken into account (for ex: switch on -> play; flush -> clean).
+   After that, your code will work a bit longer (still faster than at the beginning), 
    but at least it works correctly now.
     
 **Please note:** attach the screenshot of your script results (the console) to the PR.
