@@ -23,7 +23,7 @@ class Device(Protocol):
 
 
 class IOTService:
-    def __init__(self):
+    def __init__(self) -> None:
         self.devices: dict[str, Device] = {}
 
     def register_device(self, device: Device) -> str:
